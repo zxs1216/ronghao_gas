@@ -1,0 +1,90 @@
+{
+  "title": "荣浩燃气",
+  "config": {
+    "step": {
+      "user": {
+        "title": "添加荣浩燃气",
+        "description": "填写荣浩燃气平台账号参数。Bearer Token、用户 ID 等参数可从原 Node-RED flow 或抓包结果中取得。",
+        "data": {
+          "bearer_token": "Bearer Token",
+          "user_id": "用户 ID",
+          "userfiles_id": "用户档案 ID",
+          "userinfo_id": "用户信息 ID",
+          "api_base_url": "接口地址",
+          "aes_key": "AES 密钥"
+        },
+        "data_description": {
+          "bearer_token": "荣浩燃气接口 Authorization 里的 Bearer token，不要填写 Home Assistant 长期令牌。",
+          "user_id": "原 flow 中的 userId。",
+          "userfiles_id": "原 flow 中的 userfilesId。",
+          "userinfo_id": "原 flow 中的 userinfoId。",
+          "api_base_url": "默认使用 http://www.rhwxsf.com/ronghao。",
+          "aes_key": "请输入 16 字节 AES-128-ECB 密钥。"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "连接或拉取数据失败，请检查网络、账号参数和接口地址。",
+      "invalid_auth": "Bearer Token 无效或已过期。",
+      "invalid_aes_key": "AES 密钥必须正好是 16 字节。",
+      "unknown": "未知错误。"
+    },
+    "abort": {
+      "already_configured": "这个用户信息 ID 已经配置过。"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "account_balance": {
+        "name": "账户余额"
+      },
+      "cumulative_gas": {
+        "name": "累计用气量"
+      },
+      "meter_reading": {
+        "name": "燃气表读数"
+      },
+      "meter_gas_balance": {
+        "name": "气量余额"
+      },
+      "latest_purchase_amount": {
+        "name": "最近购气金额"
+      },
+      "latest_usage_amount": {
+        "name": "最新用气量"
+      },
+      "latest_usage_fee": {
+        "name": "最新用气金额"
+      },
+      "usage_last_12_months": {
+        "name": "最近12个月用气数"
+      },
+      "usage_last_30_days": {
+        "name": "最近30天用气数"
+      },
+      "latest_usage_time": {
+        "name": "最近一次用气时间"
+      },
+      "latest_refresh_time": {
+        "name": "最近一次刷新时间"
+      },
+      "card_data": {
+        "name": "燃气卡片数据"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "荣浩燃气选项",
+        "description": "设置荣浩燃气数据的自动刷新轮询间隔。",
+        "data": {
+          "scan_interval_hours": "轮询间隔"
+        },
+        "data_description": {
+          "scan_interval_hours": "可选 6、8、10、12、24 小时。"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+refresh:
+  name: 刷新燃气数据
+  description: 立即从荣浩燃气平台拉取一次数据。
+  fields:
+    entry_id:
+      name: 配置项 ID
+      description: 可选。留空时刷新所有荣浩燃气配置项。
+      required: false
+      selector:
+        text:
