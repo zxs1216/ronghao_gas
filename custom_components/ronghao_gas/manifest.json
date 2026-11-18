@@ -1,0 +1,12 @@
+{
+  "domain": "ronghao_gas",
+  "name": "荣浩燃气",
+  "codeowners": ["@zxs1216"],
+  "config_flow": true,
+  "documentation": "https://github.com/zxs1216/ronghao_gas",
+  "integration_type": "service",
+  "issue_tracker": "https://github.com/zxs1216/ronghao_gas/issues",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "3.2.3"
+}
